@@ -1,0 +1,6 @@
+gametitle=Freekstyle (NTSC-U) (SLUS-20367)
+comment=no interlacing by someother1ne
+patch=1,EE,20100B14,word,30420000
+patch=1,EE,20101a1c,word,64420000
+patch=1,EE,20101c84,word,64420000
+

@@ -1,0 +1,4 @@
+gametitle= Shin Megami Tensei - Nocturne [SLUS-20911] (U) [B7479F4C]
+
+patch=1,EE,202FC0E4,word,00000000 // 00000001 motion blur off
+patch=1,EE,202F59B4,word,3FC6C6E7

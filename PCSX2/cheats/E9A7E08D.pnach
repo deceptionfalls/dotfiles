@@ -1,0 +1,10 @@
+gametitle=Gran Turismo 3 Demo ((PlayStation Festival 2000 (Taikenban))(J)(PAPX-90203)
+comment=Widescreen hack by Arapapa
+
+//Widescreen hack 16:9
+
+//Y-Fov
+patch=1,EE,002b2534,word,3F52D0E5 //3f8c8b44
+
+//Zoom
+patch=1,EE,002b2614,word,3F891A2A //3fb6cd8e

@@ -1,0 +1,2 @@
+patch=1,EE,202FB964,word,00000000 //motion blur off
+//patch=1,EE,202FB968,word,00000000 //radial blur off
