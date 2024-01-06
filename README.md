@@ -7,3 +7,6 @@
 - pcsx2 saves (idc)
 
 I don't take responsability for what you do with these files, nor are they guaranteed to work on your machine.
+
+### deps
+awm depends on the [bling](https://blingcorp.github.io/bling/#/) library

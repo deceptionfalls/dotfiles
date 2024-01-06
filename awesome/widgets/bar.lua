@@ -32,7 +32,7 @@ local homeicon = wibox.widget {
         app_launcher:toggle()
       end)
     },
-  }
+}
 
 local clock = wibox.widget {
     {
@@ -52,6 +52,31 @@ local clock = wibox.widget {
     fg = beautiful.fg3,
     bg = beautiful.bg2,
     widget = wibox.container.background,
+}
+
+local music = wibox.widget {
+    {
+      {
+        {
+          image = beautiful.music,
+          halign = "center",
+          valign = "center",
+          scaling_quality = 'nearest',
+          widget = wibox.widget.imagebox
+        },
+        margins = dpi(9),
+        widget = wibox.container.margin
+      },
+      align = "center",
+      widget = wibox.container.place
+    },
+    bg = beautiful.bg2,
+    widget  = wibox.container.background,
+    buttons = {
+      awful.button({}, 1, function()
+        awesome.emit_signal("music::toggle")
+      end)
+    },
 }
 
 local function status_widget()
@@ -112,6 +137,16 @@ screen.connect_signal("request::desktop_decoration", function(s)
       widget = {
         {
           homeicon,
+          {
+            {
+              gettags(s),
+              right   = dpi(4),
+              left    = dpi(4),
+              widget  = wibox.container.margin
+            },
+            bg = beautiful.bg2,
+            widget = wibox.container.background
+          },
           spacing = dpi(4),
           layout = wibox.layout.fixed.horizontal
         },
@@ -123,16 +158,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
             buttons,
             layout  = wibox.layout.fixed.horizontal
           },
-          {
-            {
-              gettags(s),
-              right   = dpi(4),
-              left    = dpi(4),
-              widget  = wibox.container.margin
-            },
-            bg = beautiful.bg2,
-            widget = wibox.container.background
-          },
+          music,
           spacing = dpi(4),
           layout  = wibox.layout.fixed.horizontal
         },

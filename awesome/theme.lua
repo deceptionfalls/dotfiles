@@ -42,5 +42,11 @@ _T.heart_empty = gears.color.recolor_image(path .. 'heart_empty.png', _T.fg1)
 _T.close = gears.color.recolor_image(path .. "close.png", _T.fg3)
 _T.maximize = gears.color.recolor_image(path .. "maximize.png", _T.fg3)
 _T.caps = gears.color.recolor_image(path .. "caps.png", _T.fg3)
+_T.pause = gears.color.recolor_image(path .. "pause.png", _T.bg3)
+_T.play = gears.color.recolor_image(path .. "play.png", _T.bg3)
+_T.prev = gears.color.recolor_image(path .. "prev.png", _T.fg3)
+_T.next = gears.color.recolor_image(path .. "next.png", _T.fg3)
+_T.music = gears.color.recolor_image(path .. "music.png", _T.fg3)
+_T.placeholder = gears.surface.load_uncached(path .. 'unix.png')
 
 return _T

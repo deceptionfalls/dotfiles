@@ -40,5 +40,5 @@ local ranger = bling.module.scratchpad {
 
 awful.keyboard.append_global_keybindings({
     awful.key({ mod }, "m", function() center(term) end),
-    awful.key({ mod }, "n", function() center(ranger) end),
+    awful.key({ mod }, "b", function() center(ranger) end),
 })
