@@ -1,0 +1,33 @@
+#define BG #191724
+#define FG #e0def4
+#define BL #6e6a86
+#define WH #908caa
+#define R #eb6f92
+#define G #f6c177
+#define Y #ebbcba
+#define B #31748f
+#define M #9ccfd8
+#define C #c4a7e7
+
+st.font: Cozette:pixelsize=12:antialias=false;
+st.borderpx: 30
+
+*.foreground: FG
+*.background: BG
+*.cursorColor: FG
+*.color0: BL
+*.color8: BL
+*.color1: R
+*.color9: R
+*.color2: G
+*.color10: G
+*.color3: Y
+*.color11: Y
+*.color4: B
+*.color12: B
+*.color5: M
+*.color13: M
+*.color6: C
+*.color14: C
+*.color7: WH
+*.color15: WH
