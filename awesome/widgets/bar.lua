@@ -194,9 +194,4 @@ end)
 
 -- Outer gaps
 local screen = awful.screen.focused()
-screen.padding = {
-    right   = dpi(8),
-    left    = dpi(8),
-    bottom  = dpi(8),
-    top     = dpi(8)
-}
+screen.padding = dpi(20)

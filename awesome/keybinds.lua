@@ -1,6 +1,9 @@
 local awful = require("awful")
+local naughty = require("naughty")
 local bling = require("lib.bling")
+local user = require("user")
 local launcher = require("widgets.launcher")
+local helpers = require("helpers")
 local mod = "Mod4"
 
 require("awful.autofocus")
@@ -134,17 +137,17 @@ awful.keyboard.append_global_keybindings({
 
     awful.key(
       { mod }, "u", function ()
-        awful.spawn.with_shell("playerctl --player=firefox previous")
+        awful.spawn.with_shell("playerctl --player=" .. user.player .. " previous")
       end),
 
     awful.key(
       { mod }, "i", function ()
-        awful.spawn.with_shell("playerctl --player=firefox play-pause")
+        awful.spawn.with_shell("playerctl --player=" .. user.player .. " play-pause")
       end),
 
     awful.key(
       { mod }, "o", function ()
-        awful.spawn.with_shell("playerctl --player=firefox next")
+        awful.spawn.with_shell("playerctl --player=" .. user.player .. " next")
       end),
 })
 
@@ -172,6 +175,26 @@ client.connect_signal("request::default_keybindings", function()
       { mod }, "d", function(c)
         c.floating = not c.floating
 				c:raise()
+      end),
+
+    awful.key(
+      { mod, "Control" }, "k", function(c)
+        helpers.resize_client(c.focus, "up")
+      end),
+
+    awful.key(
+      { mod, "Control" }, "j", function(c)
+        helpers.resize_client(c.focus, "down")
+      end),
+
+    awful.key(
+      { mod, "Control" }, "h", function(c)
+        helpers.resize_client(c.focus, "left")
+      end),
+
+    awful.key(
+      { mod, "Control" }, "l", function(c)
+        helpers.resize_client(c.focus, "right")
       end),
 
   })

@@ -34,4 +34,9 @@ ruled.client.connect_signal("request::rules", function()
         rule_any = { type = { "normal" } },
         properties = { titlebars_enabled = true },
     }
+
+   ruled.client.append_rule {
+      rule = { class = "obsidian" },
+      properties = { titlebars_enabled = false },
+   }
 end)

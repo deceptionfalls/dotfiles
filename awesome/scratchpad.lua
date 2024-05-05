@@ -38,7 +38,19 @@ local ranger = bling.module.scratchpad {
     dont_focus_before_close = true,
 }
 
+local alsamixer = bling.module.scratchpad {
+    command = "st -c alsamixer -n alsamixer -e alsamixer",
+    rule = { instance = "alsamixer" },
+    sticky = true,
+    autoclose = true,
+    floating = true,
+    geometry = { height=600, width=900},
+    reapply = true,
+    dont_focus_before_close = true,
+}
+
 awful.keyboard.append_global_keybindings({
     awful.key({ mod }, "m", function() center(term) end),
     awful.key({ mod }, "b", function() center(ranger) end),
+    awful.key({ mod }, "v", function() center(alsamixer) end),
 })
