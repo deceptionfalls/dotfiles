@@ -1,5 +1,5 @@
 # .files
-![image](https://github.com/tsukki9696/dotfiles/assets/127806743/5a1ac14e-c78f-4ca7-a2ae-ca54a71240b1)
+![image](https://github.com/deceptionfalls/dotfiles/assets/127806743/aae822f2-2c9f-493b-94ae-8f2366d168bd)
 
 - awm
 - bash
