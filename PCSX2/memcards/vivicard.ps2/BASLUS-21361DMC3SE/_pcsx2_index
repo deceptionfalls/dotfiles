@@ -1,0 +1,23 @@
+$ROOT:
+  timeCreated: 1712015060
+  timeModified: 1712017925
+'BASLUS-21361DMC3SE':
+  order: 1
+  timeCreated: 1712015060
+  timeModified: 1712017925
+icon00.ico:
+  order: 2
+  timeCreated: 1712015062
+  timeModified: 1712015062
+icon01.ico:
+  order: 3
+  timeCreated: 1712015063
+  timeModified: 1712015064
+icon02.ico:
+  order: 4
+  timeCreated: 1712015065
+  timeModified: 1712015065
+icon.sys:
+  order: 5
+  timeCreated: 1712015066
+  timeModified: 1712015066

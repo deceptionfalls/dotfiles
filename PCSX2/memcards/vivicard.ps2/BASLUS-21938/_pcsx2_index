@@ -1,0 +1,39 @@
+$ROOT:
+  timeCreated: 1712996482
+  timeModified: 1712996486
+icon.sys:
+  order: 1
+  timeCreated: 1712996482
+  timeModified: 1712996483
+list.ico:
+  order: 2
+  timeCreated: 1712996483
+  timeModified: 1712996483
+'BASLUS-21938':
+  order: 3
+  timeCreated: 1712996483
+  timeModified: 1712996484
+profile1.dat:
+  order: 4
+  timeCreated: 1712996484
+  timeModified: 1712996484
+profile2.dat:
+  order: 5
+  timeCreated: 1712996484
+  timeModified: 1712996485
+profile3.dat:
+  order: 6
+  timeCreated: 1712996485
+  timeModified: 1712996485
+profile4.dat:
+  order: 7
+  timeCreated: 1712996485
+  timeModified: 1712996485
+global.dat:
+  order: 8
+  timeCreated: 1712996486
+  timeModified: 1712996486
+banner.bin:
+  order: 9
+  timeCreated: 1712996486
+  timeModified: 1712996486

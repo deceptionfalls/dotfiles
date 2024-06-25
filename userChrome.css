@@ -1,8 +1,8 @@
 :root {
-	--bg: #191724;
-	--bg-alt: #26233a;
-	--fg: #e0def4;
-	--fg-alt: #908caa;
+	--bg: #000000;
+	--bg-alt: #1F1F1F;
+	--fg: #BFBFBF;
+	--fg-alt: #575757;
 	--toolbar-field-focus-border-color: #0000 !important;
 	--lwt-tab-text: var(--fg) !important;
 }
@@ -37,8 +37,8 @@ toolbarspring {
 
 #TabsToolbar {
     height: 45px !important;
-	margin-top: 3px !important;
-	margin-bottom: -3px !important;
+	 margin-top: 3px !important;
+	 margin-bottom: -3px !important;
     background-color: var(--bg) !important;
 }
 

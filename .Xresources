@@ -1,15 +1,16 @@
-#define BG #191724
-#define FG #e0def4
-#define BL #6e6a86
-#define WH #908caa
-#define R #eb6f92
-#define G #f6c177
-#define Y #ebbcba
-#define B #31748f
-#define M #9ccfd8
-#define C #c4a7e7
+#define BG #000000
+#define FG #dddddd
+#define BL #080808
+#define WH #191919
+#define R #D65C5C
+#define G #ffaa88
+#define Y #789978
+#define B #7788aa
+#define M #708090 
+#define C #deeeed
 
-st.font: Cozette:pixelsize=12:antialias=false;
+st.font: fairfax:pixelsize=12:antialias=false;
+! st.font: Roboto Mono:style=Regular:pixelsize=14;
 st.borderpx: 30
 
 *.foreground: FG
