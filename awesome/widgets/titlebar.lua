@@ -2,7 +2,6 @@ local awful = require("awful")
 local wibox = require("wibox")
 local dpi = require("beautiful").xresources.apply_dpi
 local beautiful = require('beautiful')
-local user = require("user")
 
 client.connect_signal("request::titlebars", function(c)
 
@@ -58,7 +57,7 @@ client.connect_signal("request::titlebars", function(c)
 			buttons = buttons,
 			widget = wibox.container.margin
       {
-        font = user.font,
+        font = beautiful.font,
         halign = "center",
         widget = awful.titlebar.widget.titlewidget(c)
       },

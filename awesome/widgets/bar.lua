@@ -6,7 +6,6 @@ local dpi = beautiful.xresources.apply_dpi
 local bling = require('lib.bling')
 local launcher = require('widgets.launcher')
 local gettags = require('widgets.taglist')
-local user = require('user')
 
 local homeicon = wibox.widget {
     {
@@ -37,11 +36,11 @@ local homeicon = wibox.widget {
 local clock = wibox.widget {
     {
       {
-        format = '<b>%I:%M</b>',
+        format = '%I:%M',
         valign = 'center',
         halign = 'center',
         widget = wibox.widget.textclock,
-        font = user.font
+        font = beautiful.font
       },
       left = dpi(9),
       right = dpi(9),
@@ -52,6 +51,30 @@ local clock = wibox.widget {
     fg = beautiful.fg3,
     bg = beautiful.bg2,
     widget = wibox.container.background,
+    buttons = {
+      awful.button({}, 1, function()
+         awful.widget.keyboardlayout():next_layout()
+      end)
+    }
+}
+
+local systray = wibox.widget {
+    {
+      {
+        {
+          widget = wibox.widget.systray
+        },
+        margins = dpi(9),
+        widget = wibox.container.margin
+      },
+      left = dpi(9),
+      right = dpi(9),
+      bottom = dpi(0),
+      top = dpi(0),
+      widget = wibox.container.margin
+    },
+    bg = beautiful.bg2,
+    widget  = wibox.container.background
 }
 
 local music = wibox.widget {
@@ -128,7 +151,7 @@ local buttons = wibox.widget {
 
 screen.connect_signal("request::desktop_decoration", function(s)
     s.wibar = awful.wibar {
-      position = "top",
+      position = "bottom",
       screen = s,
       height = dpi(30),
       border_width = dpi(6),
@@ -153,12 +176,13 @@ screen.connect_signal("request::desktop_decoration", function(s)
           nil,
           expand = "none",
         {
+          -- systray,
           clock,
           {
             buttons,
             layout  = wibox.layout.fixed.horizontal
           },
-          music,
+		    music,
           spacing = dpi(4),
           layout  = wibox.layout.fixed.horizontal
         },
@@ -194,4 +218,4 @@ end)
 
 -- Outer gaps
 local screen = awful.screen.focused()
-screen.padding = dpi(20)
+screen.padding = dpi(10)

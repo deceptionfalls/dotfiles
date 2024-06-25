@@ -14,7 +14,7 @@ screen.connect_signal('request::wallpaper', function(s)
          screen = s,
          widget = {
             widget = wibox.container.background,
-            bg = beautiful.bg3,
+            bg = beautiful.bg2,
           }
       }
    end

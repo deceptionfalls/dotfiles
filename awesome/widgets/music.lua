@@ -5,7 +5,6 @@ local wibox = require("wibox")
 local playerctl = require("lib.bling").signal.playerctl.lib()
 local dpi = beautiful.xresources.apply_dpi
 local helpers = require("helpers")
-local user = require("user")
 
 local album_art = wibox.widget{
     widget = wibox.widget.imagebox,
@@ -15,7 +14,7 @@ local album_art = wibox.widget{
 local song_artist = wibox.widget{
     widget = wibox.widget.textbox,
     markup = helpers.colorizeText("Unknown", beautiful.fg2),
-    font = user.font,
+    font = beautiful.font,
     align = "left",
     valign = "center"
 }
@@ -23,7 +22,7 @@ local song_artist = wibox.widget{
 local song_name = wibox.widget{
     widget = wibox.widget.textbox,
     markup = helpers.colorizeText("None", beautiful.fg3),
-    font = user.font,
+    font = beautiful.font,
     align = "left",
     valign = "center"
 }
@@ -80,7 +79,7 @@ playerctl:connect_signal("metadata", function(_, title, artist, album_path, __, 
 	end
 
 	album_art:set_image(gears.surface.load_uncached(album_path))
-  song_name:set_markup_silently(helpers.colorizeText(title, beautiful.fg3))
+    song_name:set_markup_silently(helpers.colorizeText(title, beautiful.fg3))
 	song_artist:set_markup_silently(helpers.colorizeText(artist, beautiful.fg2))
 
 end)
@@ -98,7 +97,7 @@ local music_controls = wibox({
     visible = false,
     width = dpi(400),
     height = dpi(70),
-    bg = beautiful.bg2,
+    bg = beautiful.bg1,
 })
 
 music_controls:setup {
@@ -154,7 +153,7 @@ music_controls:setup {
               },
               forced_width = dpi(120),
               widget = wibox.widget.background,
-              bg = beautiful.bg3
+              bg = beautiful.bg2
             },
             layout = wibox.layout.fixed.horizontal,
             spacing = dpi(15)
@@ -172,11 +171,11 @@ awesome.connect_signal('music::toggle', function()
     music_controls.visible = not music_controls.visible
 end)
 
-awful.placement.top_right(music_controls, { margins = { right = dpi(8), top = dpi(50) }})
+awful.placement.top_right(music_controls, { margins = { right = dpi(8), top = dpi(10) }})
 
 awful.keyboard.append_global_keybindings({
   awful.key(
-  { "Mod4" }, "n", function ()
+  { "Mod4" }, "p", function ()
     awesome.emit_signal("music::toggle")
   end),
 })

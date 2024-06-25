@@ -27,6 +27,17 @@ local term = bling.module.scratchpad {
     dont_focus_before_close = true,
 }
 
+local nvim = bling.module.scratchpad {
+    command = "st -c nvim -n nvim -e nvim",
+    rule = { instance = "nvim" },
+    sticky = true,
+    autoclose = true,
+    floating = true,
+    geometry = { height=600, width=900 },
+    reapply = true,
+    dont_focus_before_close = true,
+}
+
 local ranger = bling.module.scratchpad {
     command = "st -c ranger -n ranger -e ranger",
     rule = { instance = "ranger" },
@@ -51,6 +62,7 @@ local alsamixer = bling.module.scratchpad {
 
 awful.keyboard.append_global_keybindings({
     awful.key({ mod }, "m", function() center(term) end),
+    awful.key({ mod }, "n", function() center(nvim) end),
     awful.key({ mod }, "b", function() center(ranger) end),
     awful.key({ mod }, "v", function() center(alsamixer) end),
 })

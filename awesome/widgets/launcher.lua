@@ -1,5 +1,4 @@
 local beautiful = require('beautiful')
-local user = require('user')
 local dpi = beautiful.xresources.apply_dpi
 
 return {
@@ -24,8 +23,8 @@ return {
     app_show_icon = false,
     app_content_padding = dpi(10),
     app_content_spacing = dpi(0),
-    prompt_icon_font = user.font,
-    app_name_font = user.font,
+    prompt_icon_font =  beautiful.font,
+    app_name_font = beautiful.font,
     border_color = beautiful.acc,
     background = beautiful.bg1,
     prompt_color = beautiful.bg1,
@@ -35,8 +34,8 @@ return {
     prompt_cursor_color = beautiful.fg2,
     app_normal_color = beautiful.bg1,
     app_normal_hover_color = beautiful.bg2,
-    app_selected_color = beautiful.bg3,
-    app_selected_hover_color = beautiful.bg3,
+    app_selected_color = beautiful.bg2,
+    app_selected_hover_color = beautiful.bg2,
     app_name_normal_color = beautiful.fg3,
     app_name_selected_color = beautiful.fg3,
 }

@@ -7,7 +7,9 @@ screen.connect_signal("request::desktop_decoration", function(s)
         -- If only awesome had good layouts, I miss you qtile <3
         -- awful.layout.suit.tile,
         awful.layout.suit.tile.left,
-        awful.layout.suit.max,
+        awful.layout.suit.spiral.dwindle,
+        -- awful.layout.suit.max,
+		-- awful.layout.suit.floating,
     	})
 	end)
 

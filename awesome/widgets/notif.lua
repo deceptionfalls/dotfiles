@@ -3,7 +3,6 @@ local wibox = require('wibox')
 local ruled = require('ruled')
 local naughty = require('naughty')
 local beautiful = require('beautiful')
-local user = require('user')
 local dpi = beautiful.xresources.apply_dpi
 
 naughty.config.defaults.ontop = true
@@ -17,7 +16,7 @@ ruled.notification.connect_signal('request::rules', function()
         properties = {
           bg = beautiful.bg1,
           fg = beautiful.fg3,
-          font = user.font,
+          font = beautiful.font,
           position = "top_right",
           spacing = dpi(2),
           timeout = 5
@@ -28,7 +27,7 @@ ruled.notification.connect_signal('request::rules', function()
         properties = {
           bg = beautiful.bg1,
           fg = beautiful.fg3,
-          font = user.font,
+          font = beautiful.font,
           position = "top_right",
           spacing = dpi(2),
           timeout = 5
@@ -39,7 +38,7 @@ ruled.notification.connect_signal('request::rules', function()
         properties = {
           bg = beautiful.bg1,
           fg = beautiful.fg3,
-          font = user.font,
+          font = beautiful.font,
           position = "top_right",
           spacing = dpi(2),
           timeout = 5
@@ -68,7 +67,7 @@ naughty.connect_signal("request::display", function(n)
                 margins = dpi(13),
                 widget = wibox.container.margin
               },
-              bg = beautiful.bg3,
+              bg = beautiful.bg2,
               widget = wibox.container.background
             },
             strategy = "min",
