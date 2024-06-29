@@ -50,4 +50,6 @@ _T.next = gears.color.recolor_image(path .. "next.png", _T.fg3)
 _T.music = gears.color.recolor_image(path .. "music.png", _T.fg3)
 _T.placeholder = gears.surface.load_uncached(path .. 'unix.png')
 
+_T.layout_spiral = gears.color.recolor_image(path .. "spiral_final_final.png", _T.fg3)
+
 return _T

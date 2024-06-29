@@ -37,7 +37,8 @@ local get_taglist = function(s)
     local icon_taglist = awful.widget.taglist {
         screen = s,
         filter = awful.widget.taglist.filter.all,
-        layout = {spacing = dpi(-6), layout = wibox.layout.fixed.horizontal},
+        -- layout = {spacing = dpi(-6), layout = wibox.layout.fixed.horizontal}, -- horizontal bar
+        layout = {spacing = dpi(-9), layout = wibox.layout.fixed.vertical}, -- vertical bar
         widget_template = {
             {
                 {
